@@ -2,7 +2,8 @@
 export default defineNuxtConfig({
     modules: [
         '@nuxtjs/supabase',
-        'shadcn-nuxt'
+        'shadcn-nuxt',
+        '@nuxtjs/tailwindcss'
     ],
     shadcn: {
         /**
@@ -14,13 +15,6 @@ export default defineNuxtConfig({
          * @default "./components/ui"
          */
         componentDir: './components/ui'
-    },
-    supabase: {
-
-        url: process.env.SUPABASE_URL,
-        key: process.env.SUPABASE_KEY,
-        serviceKey: process.env.SUPABASE_SERVICE_KEY,
-
     },
     compatibilityDate: '2024-11-01',
     devtools: {enabled: true}
