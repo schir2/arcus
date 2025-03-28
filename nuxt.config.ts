@@ -1,20 +1,27 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import Aura from '@primeuix/themes/aura';
+
 export default defineNuxtConfig({
     modules: [
         '@nuxtjs/supabase',
-        'shadcn-nuxt',
-        '@nuxtjs/tailwindcss'
+        '@nuxtjs/tailwindcss',
+        '@primevue/nuxt-module'
     ],
-    shadcn: {
-        /**
-         * Prefix for all the imported component
-         */
-        prefix: '',
-        /**
-         * Directory that the component lives in.
-         * @default "./components/ui"
-         */
-        componentDir: './components/ui'
+    primevue: {
+        components: {
+            prefix: 'prime',
+        },
+        options: {
+            ripple: true,
+            inputVariant: 'filled',
+            theme: {
+                preset: Aura,
+                options: {
+                    prefix: 'p',
+                    darkModeSelector: 'system',
+                    cssLayer: false
+                }
+            }
+        }
     },
     compatibilityDate: '2024-11-01',
     devtools: {enabled: true}
