@@ -15,7 +15,7 @@ const signInWithOtp = async () => {
 <template>
   <div>
     Username
-    <input v-model="email"/>{{email}}
+    <input  v-model="email"/>{{email}}
     Password?
     <input v-model="password"/>{{password}}
     <button @click="signInWithOtp">
