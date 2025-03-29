@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     ],
     primevue: {
         components: {
-            prefix: 'prime',
+            prefix: 'p',
+            include: ['InputText', 'Form', 'Password', 'Button', 'Toast', 'Message', 'MenuBar', 'Avatar', 'Badge', 'Menu']
         },
         options: {
             ripple: true,
@@ -21,6 +22,13 @@ export default defineNuxtConfig({
                     cssLayer: false
                 }
             }
+        }
+    },
+    supabase: {
+        redirectOptions: {
+            login: '/login',
+            exclude: ['/'],
+            callback: '/dashboard'
         }
     },
     compatibilityDate: '2024-11-01',
