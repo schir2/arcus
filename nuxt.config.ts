@@ -1,11 +1,7 @@
 import Aura from '@primeuix/themes/aura';
 
 export default defineNuxtConfig({
-    modules: [
-        '@nuxtjs/supabase',
-        '@nuxtjs/tailwindcss',
-        '@primevue/nuxt-module'
-    ],
+    modules: ['@nuxtjs/supabase', '@nuxtjs/tailwindcss', '@primevue/nuxt-module', '@nuxt/icon'],
     primevue: {
         components: {
             prefix: 'p',
